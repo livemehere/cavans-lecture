@@ -6,6 +6,8 @@ let deltaTime = 0;
 const fps = 60;
 const fpsTime = 1000 / fps;
 
+const dpi = window.devicePixelRatio;
+
 const state = {
     dashOffset:0,
     img: null,
@@ -22,9 +24,15 @@ function init(){
 }
 
 function resize(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    canvas.width = width * dpi;
+    canvas.height = height * dpi;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.scale(dpi, dpi);
 }
+
 resize();
 window.addEventListener('resize', resize);
 
