@@ -1,4 +1,4 @@
-# HTML5 Canvas
+# HTML5 Canvas 스터디 교안
 
 ## Reference
 
@@ -30,3 +30,48 @@
 - textBaseline: 텍스트의 세로 정렬을 설정합니다.
 - direction: 텍스트의 방향을 설정합니다.
 - imageSmoothingEnabled: 이미지를 부드럽게 표시할지 여부를 설정합니다.
+
+## FPS
+
+모니터 마다 화면 주사율이 다르기 때문에, requestAnimationFrame 을 사용하여 애니메이션을 구현할 때, FPS 를 고려해야 합니다.   
+requestAnimationFrame 의 콜백 주기에 따라서 애니메이션이 빠르게 실행될 수도, 느리게 실행될 수도 있기 때문에, 콜백의 실행시간을 계산하여 FPS 를 조정합니다.
+
+```js
+let fps = 60;
+let now;
+let then = Date.now();
+let interval = 1000 / fps;
+let delta;
+
+function loop() {
+    requestAnimationFrame(loop);
+
+    now = Date.now();
+    delta = now - then;
+
+    if (delta > interval) {
+        then = now - (delta % interval);
+        // 그리기
+    }
+}
+
+loop();
+```
+
+## DPI
+
+모니터의 해상도에 따라서 캔버스의 선명도를 조정할 수 있습니다.
+
+```js
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+const dpi = window.devicePixelRatio;
+canvas.width = 300 * dpi;
+canvas.height = 300 * dpi;
+canvas.style.width = 300 + 'px';
+canvas.style.height = 300 + 'px';
+ctx.scale(dpi, dpi);
+```
+
+## 2차 함수
