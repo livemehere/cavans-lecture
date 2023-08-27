@@ -27,10 +27,12 @@ let mouse = {
   x2: 0,
   y2: 0,
 };
+
 let targetMouse = {
   x: 0,
   y: 0,
 };
+
 let dashOffset = 0;
 
 function draw() {
