@@ -74,4 +74,20 @@ canvas.style.height = 300 + 'px';
 ctx.scale(dpi, dpi);
 ```
 
-## 2차 함수
+## Examples
+
+### 1.fireworks
+
+![](./images/1.firework.gif)
+
+### 2.dotToDot
+
+![](./images/2.dotToDot.gif)
+
+### 3.rain
+
+![](./images/3.rain.gif)
+
+### 4.fizzy
+
+![](./images/4.fizzy.gif)
