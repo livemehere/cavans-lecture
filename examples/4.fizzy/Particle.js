@@ -6,7 +6,7 @@ export class Particle {
     this.x = x;
     this.y = y;
     this.r = random(5, 10);
-    this.color = `hsla(${random(30, 60)},100%,${random(50, 100)}%,1)`;
+    this.color = `hsla(${random(30, 60)},100%,${random(50, 100)}%,  1)`;
     this.vx = this.vxNagative ? random(0, 50) * -0.1 : random(0, 50) * 0.1;
     this.vy = random(-10, 10);
     this.vxMult = random(10, 20) * 0.05;
