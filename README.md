@@ -91,3 +91,7 @@ ctx.scale(dpi, dpi);
 ### 4.fizzy
 
 ![](./images/4.fizzy.gif)
+
+### 5.acid-rain
+
+![](./images/5.acid-rain.gif)
