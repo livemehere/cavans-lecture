@@ -29,7 +29,6 @@ class LineChart {
   }
 
   draw() {
-    console.log("draw");
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.drawAxesY();
     this.drawAxesX();
@@ -118,4 +117,4 @@ const chart = new LineChart({
 
 document.body.appendChild(chart.domElement);
 
-chart.setData([8, 4, 7, 2, 3, 2, 5, 8]);
+chart.setData([8, 4, 7, 2, 3, 2, 5, 10]);
